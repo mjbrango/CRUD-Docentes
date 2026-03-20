@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Docentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Gestión de Docentes</h1>
+
+    <form id="formDocentes">
+        <select id="tipoDocumento" required>
+            <option value="">Tipo Documento</option>
+            <option>C.C</option>
+            <option>C.E</option>
+            <option>T.I</option>
+            <option>NIUP</option>
+        </select>
+
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+        <input type="date" id="fechaNacimiento" required>
+
+        <select id="nivel">
+            <option>Pregrado</option>
+            <option>Maestría</option>
+            <option>Doctorado</option>
+        </select>
+
+        <select id="area">
+            <option value="">Área</option>
+            <option>Matematicas</option>
+            <option>Ciencias</option>
+            <option>Sistemas</option>
+        </select>
+
+        <input type="text" id="asignatura" placeholder="Asignatura">
+
+        <select id="grado">
+            <option>Primer Semestre</option>
+            <option>Segundo Semestre</option>
+            <option>Tercer Semestre</option>
+            <option>Cuarto Semestre</option>
+        </select>
+
+        <input type="text" id="eps" placeholder="EPS">
+        <input type="number" id="salario" placeholder="Salario">
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    <h2>Lista de Docentes</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Área</th>
+                <th>Asignatura</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaDocentes"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
